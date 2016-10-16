@@ -1,8 +1,25 @@
-<html>
-outside
-<body class="fullbleed layout vertical">
-  <paper-header-panel class="flex">
-    <div>inside</div>
-  </paper-header-panel>
-</body>
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+    <link rel="import" href="bower_components/paper-card/paper-card.html">
+  </head>
+
+  <body>
+    <paper-header-panel>
+      <paper-toolbar>Header</paper-toolbar>
+      <div>Content goes here...</div>
+    </paper-header-panel>
+    <paper-card heading="Card Title">
+      <div class="card-content">Some content</div>
+      <div class="card-actions">
+        <paper-button>Some action</paper-button>
+      </div>
+    </paper-card>
+
+
+
+  </body>
+
 </html>

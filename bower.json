@@ -1,7 +1,12 @@
 {
-    "name": "my-project",
-    "version": "0.0.0",
-    "dependencies": {
-        "polymer":"*",
-    }
+  "name": "MySite",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/dfontana/dfontana.github.io",
+  "private": true,
+  "dependencies": {
+    "polymer": "*",
+    "paper-header-panel": "PolymerElements/paper-header-panel#^1.1.7"
+  }
 }

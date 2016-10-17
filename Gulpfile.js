@@ -25,7 +25,7 @@ gulp.task("modularize-styles",['styles'], function() {
                 return path.basename(file.path, path.extname(file.path)) + "-css";
             }
         }))
-        .pipe(gulp.dest("./src"));
+        .pipe(gulp.dest("./"));
 });
 
 //Watch task

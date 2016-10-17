@@ -1,0 +1,13 @@
+{
+  "name": "homepage",
+  "private": true,
+  "dependencies": {
+    "polymer": "polymer/polymer#^1.4.0",
+    "iron-flex-layout": "polymerelements/iron-flex-layout#^1.0.0",
+    "paper-header-panel": "PolymerElements/paper-header-panel#^1.1.7",
+    "paper-card": "PolymerElements/paper-card#^1.1.4"
+  },
+  "devDependencies": {
+    "web-component-tester": "^4.0.0"
+  }
+}

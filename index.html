@@ -8,6 +8,7 @@
     <link rel="import" href="bower_components/paper-button/paper-button.html">
 
     <style is="custom-style" include="iron-flex iron-flex-alignment">
+      @import url('https://fonts.googleapis.com/css?family=PT+Sans');
       paper-header-panel {
         @apply(--shadow-elevation-2dp);
       }
@@ -15,7 +16,7 @@
       body {
         margin: 0px;
         height: 100vh;
-        /*background: linear-gradient(white, #b2ebf2);*/
+        background-image: url("images/stardust.png");
       }
       
       paper-card {
@@ -23,23 +24,47 @@
       }
       
       .paper-header {
-        height: 60px;
+        height: 66px;
         font-size: 16px;
         line-height: 60px;
         padding: 0 10px;
         color: white;
-        transition: height 0.2s;
+        /*transition: height 0.2s;*/
         @apply(--layout-horizontal);
         @apply(--layout-center);
       }
-      
-      .paper-header.tall {
-        height: 120px;
-      }
+      /*.paper-header.tall {
+        height: 100px;
+      }*/
       
       .cyangrad {
-        background: var(--paper-cyan-500);
+        background: #EAEAEA;
+        /*background: linear-gradient(45deg, #00ffcc, var(--paper-cyan-500));*/
+      }
+      
+      .logo {
+        margin-left: 1em;
+        height: 100%;
+        width: auto;
+        padding: 0 1em;
+        @apply(--layout-vertical);
+        @apply(--layout-center-center);
         background: linear-gradient(45deg, #00ffcc, var(--paper-cyan-500));
+      }
+      
+      .menu_bar {
+        @apply(--layout-horizontal);
+        @apply(--layout-justified);
+        margin-left: 1.5em;
+        color: #999999;
+        font-family: 'PT Sans', sans-serif;
+      }
+      
+      .menu_item {
+        width: auto;
+        padding-right: 2.5em;
+        height: 100%;
+        transform: translate(0, 3px);
       }
       
       .singleWide {
@@ -69,6 +94,7 @@
       }
       
       .footer_item {
+        font-family: 'PT Sans', sans-serif;
         padding-top: 1em;
         @apply(--layout-horizontal);
         @apply(--layout-center-justified);
@@ -79,8 +105,11 @@
   <body class="fullbleed layout vertical">
     <paper-header-panel mode="waterfall-tall" class="flex">
       <div class="paper-header cyangrad">
-        <div>
-          waterfall-tall
+        <div class="logo">Logo</div>
+        <div class="menu_bar">
+          <div class="menu_item">Projects</div>
+          <div class="menu_item">My Book</div>
+          <div class="menu_item">About me</div>
         </div>
       </div>
 

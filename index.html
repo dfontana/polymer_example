@@ -5,8 +5,23 @@
     <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
     <link rel="import" href="bower_components/paper-card/paper-card.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
 
     <style is="custom-style" include="iron-flex iron-flex-alignment">
+      paper-header-panel {
+        @apply(--shadow-elevation-2dp);
+      }
+      
+      body {
+        margin: 0px;
+        height: 100vh;
+        /*background: linear-gradient(white, #b2ebf2);*/
+      }
+      
+      paper-card {
+        margin: 0.3em;
+      }
+      
       .paper-header {
         height: 60px;
         font-size: 16px;
@@ -14,16 +29,17 @@
         padding: 0 10px;
         color: white;
         transition: height 0.2s;
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
       }
       
-      .cyan {
-        background-color: var(--paper-cyan-500);
+      .paper-header.tall {
+        height: 120px;
       }
       
-      body {
-        margin: 0px;
-        height: 100vh;
-        background: linear-gradient(white, #b2ebf2);
+      .cyangrad {
+        background: var(--paper-cyan-500);
+        background: linear-gradient(45deg, #00ffcc, var(--paper-cyan-500));
       }
       
       .singleWide {
@@ -32,37 +48,51 @@
       }
       
       .tripleWide {
-        @apply(--layout-horizontal);    
+        @apply(--layout-horizontal);
       }
       
       .row {
-         padding-top: 1.5em; 
-         padding-left: 0.5em;
-         padding-right: 0.5em;
+        padding-top: 1.5em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
       }
       
       .flexchild {
         @apply(--layout-flex-auto);
       }
       
-      paper-card {
-        margin: 0.3em;
+      .footer_container {
+        margin-top: 1.5em;
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+      }
+      
+      .footer_item {
+        padding-top: 1em;
+        @apply(--layout-horizontal);
+        @apply(--layout-center-justified);
       }
     </style>
   </head>
 
   <body class="fullbleed layout vertical">
     <paper-header-panel mode="waterfall-tall" class="flex">
-      <div class="paper-header cyan">waterfall-tall</div>
+      <div class="paper-header cyangrad">
+        <div>
+          waterfall-tall
+        </div>
+      </div>
 
       <div class="singleWide row">
-          <paper-card heading="Card Title" class="flexchild">
-            <div class="card-content">Some content</div>
-            <div class="card-actions">
-              <paper-button>Some action</paper-button>
-            </div>
-          </paper-card>
+        <paper-card heading="Card Title" class="flexchild">
+          <div class="card-content">Some content</div>
+          <div class="card-actions">
+            <paper-button>Some action</paper-button>
+          </div>
+        </paper-card>
       </div>
+
       <div class="tripleWide row">
 
         <paper-card heading="Card Title" class="flexchild">
@@ -89,6 +119,45 @@
 
       </div>
 
+      <div class="singleWide row">
+        <paper-card heading="Card Title" class="flexchild">
+          <div class="card-content">Some content</div>
+          <div class="card-actions">
+            <paper-button>Some action</paper-button>
+          </div>
+        </paper-card>
+      </div>
+
+      <div class="tripleWide row">
+
+        <paper-card heading="Card Title" class="flexchild">
+          <div class="card-content">Some content</div>
+          <div class="card-actions">
+            <paper-button>Some action</paper-button>
+          </div>
+        </paper-card>
+
+
+        <paper-card heading="Card Title" class="flexchild">
+          <div class="card-content">Some content</div>
+          <div class="card-actions">
+            <paper-button>Some action</paper-button>
+          </div>
+        </paper-card>
+
+        <paper-card heading="Card Title" class="flexchild">
+          <div class="card-content">Some content</div>
+          <div class="card-actions">
+            <paper-button>Some action</paper-button>
+          </div>
+        </paper-card>
+
+      </div>
+
+      <div class="footer_container">
+        <div class="footer_item">Posted by: Nillin</div>
+        <div class="footer_item">Contact information: Not Yet.</div>
+      </div>
     </paper-header-panel>
   </body>
 

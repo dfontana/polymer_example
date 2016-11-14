@@ -1,0 +1,7 @@
+{
+  "name": "site-app",
+  "short_name": "site-app",
+  "description": "please",
+  "start_url": "/",
+  "display": "standalone"
+}
